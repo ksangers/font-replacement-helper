@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "${FONT_FAMILY}";
+  src: local("${FONT_REPLACEMENT}");
+  font-weight: normal;
+  font-style: normal;
+  font-feature-settings: "frac" 0;
+}

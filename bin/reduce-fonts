@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+for file in serif-fonts sans-serif-fonts monospace-fonts; do
+  file="$(dirname "$0")/../assets/$file"
+  sort -u "$file" -o "$file"
+done

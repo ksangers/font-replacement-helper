@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+TEMPLATE_DIR="$(dirname "$0")/../src/templates"
+if [ ! -f "$TEMPLATE_DIR/$1" ]; then
+  echo "Template '$1' not found"
+  exit 1
+fi
+export FONT_FAMILY="$2"
+export FONT_REPLACEMENT="$3"
+envsubst '$FONT_FAMILY,$FONT_REPLACEMENT' < "$TEMPLATE_DIR/$1"

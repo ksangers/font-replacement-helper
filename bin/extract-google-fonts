@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+cat "$(dirname "$0")/../assets/google-fonts.json" | jq -r '.familyMetadataList[] | select(.category == "Sans Serif") | .family' >> "$(dirname "$0")/../assets/sans-serif-fonts"
+cat "$(dirname "$0")/../assets/google-fonts.json" | jq -r '.familyMetadataList[] | select(.category == "Serif") | .family' >> "$(dirname "$0")/../assets/serif-fonts"
+cat "$(dirname "$0")/../assets/google-fonts.json" | jq -r '.familyMetadataList[] | select(.category == "Monospace") | .family' >> "$(dirname "$0")/../assets/monospace-fonts"

@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+source "$(dirname "$0")/../config/main.sh"
+while read font; do bin/render "$TEMPLATE" "$font" "$MONOSPACE"; done < "$(dirname "$0")/../assets/monospace-fonts"
+while read font; do bin/render "$TEMPLATE" "$font" "$SANS_SERIF"; done < "$(dirname "$0")/../assets/sans-serif-fonts"
+while read font; do bin/render "$TEMPLATE" "$font" "$SERIF"; done < "$(dirname "$0")/../assets/serif-fonts"
