@@ -1,0 +1,5 @@
+  <!-- Replace ${FONT_FAMILY} -->
+  <match target="pattern">
+    <test qual="any" name="family"><string>${FONT_FAMILY}</string></test>
+    <edit name="family" mode="assign" binding="same"><string>${FONT_REPLACEMENT}</string></edit>
+  </match>
